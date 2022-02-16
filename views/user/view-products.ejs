@@ -1,0 +1,41 @@
+<section>
+  <div class="container mt-5">
+  <div class="row">
+    <% for(i of products){ %>
+    <div class="col-lg-4 col-md-6 col-12">
+      <div class="single-product">
+        <div class="product-image">
+          <img
+            src="<%= i.image %>"
+            alt="#"
+          />
+          <span class="new-tag">New</span>
+          <div class="button">
+            <a href="product-details.html" class="btn"
+              ><i class="lni lni-cart"></i> Add to Cart</a
+            >
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="category"><%= i.category %></span>
+          <h4 class="title">
+            <a href="product-grids.html"><%= i.title %></a>
+          </h4>
+          <ul class="review">
+            <li><i class="lni lni-star-filled"></i></li>
+            <li><i class="lni lni-star-filled"></i></li>
+            <li><i class="lni lni-star-filled"></i></li>
+            <li><i class="lni lni-star-filled"></i></li>
+            <li><i class="lni lni-star-filled"></i></li>
+            <li><span>5.0 Review(s)</span></li>
+          </ul>
+          <div class="price">
+            <span><%= i.price %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+</section>

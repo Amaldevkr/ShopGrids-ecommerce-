@@ -1,0 +1,40 @@
+<section>
+    <div class="container">
+      <div class="row mt-4  mb-2" style="padding-right:89%;">
+        <a href="/admin/add-products" class="btn btn-success ml-auto ">add product</a>
+  
+      </div>
+
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">no</th>
+            <th scope="col">name</th>
+            <th scope="col">catagory</th>
+            <th scope="col">price</th>
+            <th scope="col">image</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+  
+          <% for(i of products){ %>
+          <tr> 
+            <th scope="row"><%= i.no%></th>
+            <td><%= i.title %></td>
+            <td><%= i.category %></td>
+            <td><%= i.price %></td>
+            <td><img style="height: 50px; width: 50px;" src='<%=i.image %>' class=" w-100 hover-shadow card-img-top " alt="..."></td>
+            <td> 
+              <a  href="/admin/edit-product?id=<%= i._id %>&name=<%= i.name %>&price=<%= i.price %>&catogory=<%= i.catogory %>&description=<%= i.description %>&image=<%= i.image %>" style="margin-left: 10px;" type="button" class="btn btn-primary ">Edit</a>
+            </td>    
+            <td> 
+              <a  href="/admin/delete-product?id=<%= i._id %>" style="margin-left: 10px;" type="button" class="btn btn-danger">Delete</a>
+              </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+  
+    </div>
+  </section>
